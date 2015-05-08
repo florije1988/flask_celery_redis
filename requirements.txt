@@ -19,3 +19,4 @@ redis==2.10.3
 simplejson==3.6.5
 tornado==4.1
 tornado-celery==0.3.4
+tornado-redis==2.4.18
