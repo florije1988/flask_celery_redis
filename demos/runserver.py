@@ -35,7 +35,8 @@ class AsyncHandler(RequestHandler):
         tasks.sleep.apply_async(args=[3], callback=self.on_result)
 
     def on_result(self, response):
-        self.write(str(response.result))
+        print response.result
+        self.write('fuboqing')
         self.finish()
 
 
@@ -66,5 +67,6 @@ application = Application([
 ])
 
 if __name__ == "__main__":
-    application.listen(8887)
+    application.listen(5000)
+    print "runing on port %s" % 5000
     ioloop.IOLoop.instance().start()
